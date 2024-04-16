@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import FormInput from "../form-input/form-input.component";
+
 import { 
     createAuthUserWithEmailAndPassword,
     createUserDocumentFromAuth
@@ -21,7 +23,7 @@ const SignUpForm = () => {
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
-    }
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -36,7 +38,7 @@ const SignUpForm = () => {
                 email, 
                 password
             );
-            
+
             await createUserDocumentFromAuth(user, { name });
             resetFormFields();
         } catch(error) {
@@ -58,8 +60,8 @@ const SignUpForm = () => {
         <div>
             <h1>Sign up</h1>
             <form onSubmit={handleSubmit}>
-                <label>Name</label>
-                <input 
+                <FormInput 
+                    label="Name"
                     onChange={handleChange}
                     type="text"
                     name="name"
@@ -67,8 +69,8 @@ const SignUpForm = () => {
                     required
                 />
 
-                <label>Email</label>
-                <input 
+                <FormInput
+                    label="Email"
                     onChange={handleChange} 
                     type="email" 
                     name="email"
@@ -76,8 +78,8 @@ const SignUpForm = () => {
                     required
                 />
 
-                <label>Password</label>
-                <input 
+                <FormInput
+                    label="Password" 
                     onChange={handleChange}
                     type="password" 
                     name="password"
@@ -85,8 +87,8 @@ const SignUpForm = () => {
                     required
                 />
 
-                <label>Confirm Password</label>
-                <input 
+                <FormInput 
+                    label="Confirm Password"
                     onChange={handleChange} 
                     type="password" 
                     name="confirmPassword"
