@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
+import '../../components/sign-up-form/sign-up-form.styles.scss'
 
 import { 
     createAuthUserWithEmailAndPassword,
@@ -57,8 +58,9 @@ const SignUpForm = () => {
     };
 
     return (
-        <div>
-            <h1>Sign up</h1>
+        <div className='sign-up-container'>
+            <h2>I do not have an account?</h2>
+            <span>Sign up with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput 
                     label="Name"
