@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 
 const defaultFormFields = {
     name: '',
@@ -24,7 +25,7 @@ const SignUpForm = () => {
     return (
         <div>
             <h1>Sign up</h1>
-            <form onSubmit={() =>{}}>
+            <form onSubmit={() => {}}>
                 <label>Name</label>
                 <input 
                     onChange={handleChange}
