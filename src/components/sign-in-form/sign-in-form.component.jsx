@@ -40,7 +40,13 @@ const SignInForm = () => {
             console.log(response);
             resetFormFields();
         } catch(error) {
-           
+          switch (error.code) {
+            case 'auth/invalid-credential':
+                alert('Incorrect credentials for either email or password. Please try again.');
+                break;
+            default:
+           console.log(error);
+           }
         }
     };
 
