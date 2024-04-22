@@ -11,16 +11,15 @@ import {
 import './sign-up-form.styles.scss';
 
 const defaultFormFields = {
-    name: '',
+    displayName: '',
     email:'',
     password:'',
-    confirmPassword:''
-}
+    confirmPassword:'',
+};
 
 const SignUpForm = () => {
-
     const [formFields, setFormFields] = useState(defaultFormFields);
-    const { name, email, password, confirmPassword } = formFields;
+    const { displayName, email, password, confirmPassword } = formFields;
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
@@ -40,7 +39,7 @@ const SignUpForm = () => {
                 password
             );
 
-            await createUserDocumentFromAuth(user, { name });
+            await createUserDocumentFromAuth(user, { displayName });
             resetFormFields();
         } catch(error) {
             if(error.code === 'auth/email-already-in-use'){
@@ -63,11 +62,11 @@ const SignUpForm = () => {
             <span>Sign up with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput 
-                    label="Name"
+                    label="Display Name"
                     onChange={handleChange}
                     type="text"
-                    name="name"
-                    value={name}
+                    name="displayName"
+                    value={displayName}
                     required
                 />
 

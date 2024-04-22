@@ -49,21 +49,18 @@ const firebaseConfig = {
 
     const userDocRef = doc(db, 'users', userAuth.uid);
 
-    console.log(userDocRef);
+    console.log('User Data:', userAuth);
+    console.log('Document Reference:', userDocRef.path);
 
     const userSnapshot = await getDoc(userDocRef);
-    console.log(userSnapshot);
-    console.log(userSnapshot.exists());
 
-    // if user data does not exists
-    // create / set document with the data from userAuth in my collection
     if(!userSnapshot.exists()) {
-        const { name, email } = userAuth;
+        const { displayName, email } = userAuth;
         const createdAt = new Date();
 
         try{
             await setDoc(userDocRef, {
-                name,
+                displayName,
                 email,
                 createdAt,
                 ...additionalInformation,
@@ -72,7 +69,6 @@ const firebaseConfig = {
             console.log('Error creating user', error.message);
         }
     }
-    // return userDocRef
     return userDocRef;
   };
 
