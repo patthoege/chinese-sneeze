@@ -14,8 +14,6 @@ const loggerMiddleware = (store) => (next) => (action) => {
     next(action);
 
     console.log('next state: ', store.getState());
-    
-
 }
 
 const middleWares = [loggerMiddleware];
