@@ -39,32 +39,54 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies Used
 
-### Code Splitting
+### Main Languages Used
+- React.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Frameworks, Libraries & Programs Used
+- **Visual Studio:** Served as the primary workspace for project development, facilitating the creation and modification of JSX/CSS files before repository submission on GitHub.
+- **GitHub:** Used as the hosting platform to store the project repository for version control.
+- **React-Styled-Component:** The styling library that has aided to the layout of the site, and which was introduced to us during the course of the program.
+- **ReactJS:** To build the components that would collectively form the front-end application.
+- **NPM JS** - The npm registry website used for information on npm libraries.
+- **react-router-dom:** enables you to implement dynamic routing in a web app. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Databases Platform and Cloud Storage
+- **Firebase:** database service provided by ElephantSQL for data storage.
+- **Heroku Postgres:** SQL database service provided directly by Heroku for storing data.
+- **Cloudinary:** to store images and static files in production.
+- **Heroku:** to deploy and run the application in production.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[Back to top](<#table-of-contents>)
 
-### Advanced Configuration
+## Components
+Several components have been implemented within this project that have been reused throughout the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- - **Assets:**
+- 
 
-### Deployment
+####  Hooks
+- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+####  Routes
+- 
 
-### `npm run build` fails to minify
+#### Utils
+- **firebase:** contains helper functions for managing pagination (fetchMoreData), updating follower counts and following status (followHelper and unfollowHelper), and handling authentication tokens (setTokenTimestamp, shouldRefreshToken, removeTokenTimestamp). These functions streamline data management and authentication tasks within the Moments WalkThrough Project.
+- **reducer:** 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Store
+
+[Back to top](<#table-of-contents>)
+
+
+## Deployment
+- **Netlify:** 
+
+
+[Back to top](<#table-of-contents>)
