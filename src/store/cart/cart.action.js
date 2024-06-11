@@ -53,8 +53,8 @@ export const setIsCartOpen = (boolean) =>
         return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
     }
 
-    export const removeItemToCart = (cartItems, cartItemToRemove) => {
-        const newCartItems = removeCartItem(cartItems, cartItemToRemove);
+    export const removeItemFromCart = (cartItems, cartItemFromRemove) => {
+        const newCartItems = removeCartItem(cartItems, cartItemFromRemove);
         return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
     };
 
