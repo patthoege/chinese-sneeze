@@ -13,10 +13,10 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middleWares = [process.env.NODE_ENV != 'production' && loggerMiddleware].filter(Boolean);
+const middleWares = [process.env.NODE_ENV !== 'production' && loggerMiddleware].filter(Boolean);
 
 const composeEnhancer = 
-(process.env.NODE_ENV != 'production' && 
+(process.env.NODE_ENV !== 'production' && 
     window && 
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || 
 compose;
